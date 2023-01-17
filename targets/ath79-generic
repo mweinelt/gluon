@@ -119,15 +119,6 @@ device('d-link-dir-505', 'dlink_dir-505', {
 	},
 })
 
-device('d-link-dir825b1', 'dlink_dir-825-b1', {
-	factory = false,
-	class = 'tiny', -- Only 6M of usable Firmware space
-	manifest_aliases = {
-		'd-link-dir-825-rev-b1', -- Upgrade from OpenWrt 19.07
-	},
-})
-
-
 -- Enterasys
 
 device('enterasys-ws-ap3705', 'enterasys_ws-ap3705i', {
@@ -466,23 +457,6 @@ device('tp-link-cpe710-v1', 'tplink_cpe710-v1')
 
 device('tp-link-eap225-outdoor-v1', 'tplink_eap225-outdoor-v1', {
 	packages = ATH10K_PACKAGES_QCA9888,
-})
-
-device('tp-link-re355-v1', 'tplink_re355-v1', {
-	manifest_aliases = {
-		'tp-link-re355', -- upgrade from OpenWrt 19.07
-	},
-	packages = ATH10K_PACKAGES_SMALLBUFFERS_QCA9880,
-	broken = true, -- OOM with 5GHz enabled in most environments if device is 64M RAM variant
-	class = 'tiny', -- Only 6M of usable Firmware space
-})
-
-device('tp-link-re450-v1', 'tplink_re450-v1', {
-	packages = ATH10K_PACKAGES_QCA9880,
-	manifest_aliases = {
-		'tp-link-re450', -- upgrade from OpenWrt 19.07
-	},
-	class = 'tiny', -- Only 6M of usable Firmware space
 })
 
 device('tp-link-tl-wdr3500-v1', 'tplink_tl-wdr3500-v1')
